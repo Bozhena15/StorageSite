@@ -1,0 +1,16 @@
+﻿@model MyStorageSite.Models.Order
+
+@{
+    ViewData["Title"] = "DeleteOrder";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>DeleteOrder</h2>
+
+<h3>This data has been deleted!</h3>
+<div>
+    <form asp-action="DeleteOrder">
+        <input type="hidden" asp-for="Id" />
+        <a href="@Url.Action("AllOrders", "Home")" class="btn btn-outline-dark">Back to List</a>
+    </form>
+</div>

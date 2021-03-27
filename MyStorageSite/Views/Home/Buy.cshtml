@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Buy";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<!doctype html>
+<html>
+<head>
+    <title>"Storage"</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Order</h1>
+    <form method="post">
+        <input type="hidden" name="Products.Id" value="@ViewBag.ProductId" />
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input name="User" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input name="Address" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input name="contactPhone" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Send" class="btn btn-outline-dark" /></td>
+                <td>
+                    <a href="@Url.Action("AllProducts", "Home")" class="btn btn-outline-dark">Back to List</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MyStorageSite.Models.Product>
+@{
+    ViewData["Title"] = "AllProducts";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<!doctype html>
+<html>
+<head>
+    <title>Storage</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Hello</h1>
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.ProductName</td>
+                <td>@p.Price</td>
+                <td><a href="~/Home/Buy/@p.Id" class="btn btn-outline-dark">Buy</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
